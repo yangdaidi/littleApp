@@ -1,0 +1,52 @@
+<!-- u-item components 每一个tag-->
+<!-- <import src="../../components/item.wxml" /> -->
+<template  name="listTag">
+	<navigator class="u-tag-ibox" url="/pages/list/list?menuId={{id}}" open-type="redirect">
+        <view class="tag-icon" style="background:url({{iconUrl2}});background-size:contain;"></view>
+        <text class="tag-name">{{ tagName }}</text>
+        <view class="tag-more-icon"></view>
+        <text class="tag-more">更多</text>
+    </navigator>
+</template>
+
+<template  name="listTag2">
+    <view class="u-tag-ibox">
+        <view class="tag-icon" style="background:url({{iconUrl2}});background-size:contain;"></view>
+        <text class="tag-name">{{ tagName }}</text>
+    </view>
+</template>
+
+
+
+
+
+
+
+
+
+<!-- <block wx:if="{{ tagList.list1.count}}">
+    <navigator class="home-tag-ibox" url="/pages/list/list?menuId={{tagList.list1.tag.id}}" open-type="redirect">
+        <view class="tag-icon" style="background:url({{tagList.list1.tag.iconUrl2}});background-size:contain;"></view>
+        <text class="tag-name">{{ tagList.list1.tag.tagName }}</text>
+        <view class="tag-more-icon"></view>
+        <text class="tag-more">更多</text>
+    </navigator>
+    <view class="u-list">
+        <block wx:for="{{ tagList.list1.resultList }}" wx:key="unique">
+            <view class="u-item">
+                <view class="u-box">
+                  <navigator class="item-snapshot" url="/pages/channel/channel?id={{ item.deviceId }}">
+                    <image class="item-img" src="{{ item.coverFileName }}" alt=""/>
+                    <view class="item-play"></view>
+                  </navigator>
+                </view>
+                <view class="item-name">{{ item.name }}</view>
+                <view class="item-detail">
+                    <view class="u-fl">
+                        <text class="item-detail-text">{{ item.playCount + item.viewCount }} 次观看</text>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+  </block>  -->

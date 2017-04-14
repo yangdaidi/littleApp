@@ -1,0 +1,22 @@
+/**app.wxss**/
+/*小程序本地调试：可以使用logo等图片，但是并不会上传到微信服务器	，所以预览和实际发布最好采用base64或网络url*/
+@import "style/include.wxss"
+@import "style/components.wxss"
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+} 
+
+
+/*reset swiper 面板指示点样式*/
+.wx-swiper-dot{
+	width: 20rpx !important;
+	height: 20rpx !important;
+}
+.wx-swiper-dots{
+	width: 100% !important;
+}

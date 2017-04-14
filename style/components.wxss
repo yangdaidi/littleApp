@@ -1,0 +1,67 @@
+/*components/tag.wxml style*/
+.u-tag-ibox{width: 100%;padding: 30rpx 30rpx;box-sizing:border-box;color: #333;line-height: 32rpx;}
+.u-tag-ibox .tag-icon{display: inline-block;vertical-align: top;width: 32rpx;height: 32rpx;}
+.u-tag-ibox .tag-name{margin-left: 4rpx;display: inline-block;font-weight: bold;font-size:28rpx;}
+.u-tag-ibox .tag-more{float:right;display: inline-block;font-size: 24rpx;}
+.u-tag-ibox .tag-more-icon{float: right;display: inline-block;margin-left:8rpx;width:24rpx;height:32rpx;background:url(../../images/icon.png) no-repeat;background-size:40rpx;background-position: 0 4rpx;}
+
+/*components/item.wxml style*/
+.u-list{width: 100%;padding:0 30rpx;box-sizing:border-box;overflow: hidden;}
+.u-list .u-item{display: inline-block;width: 50%;max-width: 50%;margin-bottom: 30rpx;box-sizing: border-box;}
+.u-list .u-item:nth-of-type(even){padding-left: 16rpx;}
+.u-list .u-item:nth-of-type(odd){padding-right: 16rpx;}
+.u-list .item-snapshot{
+	position: relative;
+	overflow: hidden;
+	width:100%;
+    padding-bottom: 56.25%;
+    background:url(../../images/load.png) no-repeat;
+    background-size: contain;
+}
+.u-list .item-snapshot .item-img{
+	width: 100%;
+	height: 185rpx;
+	position: absolute;
+}
+.u-list .item-snapshot .item-play{
+	position: absolute;
+    width: 116rpx;
+    height: 32rpx;
+    top: 0;
+    left: 0;
+    background: url(../../images/playing.png) no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.u-list .item-name{
+	height: 32rpx;
+	padding: 0 4rpx;
+	margin: 12rpx 0;
+	box-sizing:border-box;
+	line-height: 32rpx;
+	font-size: 28rpx;
+	overflow: hidden;
+	word-break:break-all;
+	text-overflow : ellipsis;
+	white-space: nowrap;
+}
+.u-list .item-detail{font-size: 0;}
+.u-list .item-detail .u-fl{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    height: 28rpx;
+    font-size: 0;
+}
+.u-list .item-detail .u-fl .item-detail-text{
+	display: inline-block;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    box-sizing: border-box;
+    padding-left: 4rpx;
+    font-size: 20rpx;
+    line-height: 28rpx;
+    color: #999;
+}

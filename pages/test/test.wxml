@@ -1,0 +1,23 @@
+<!--pages/test/test.wxml-->
+
+<include src="../../include/tag.wxml" />
+<include src="../../include/header.wxml"/>
+
+
+<switch wx:for="{{objectArray}}" wx:key="unique" style="display: block;"> {{item.id}} </switch>
+<button bindtap="switch"> Switch </button>
+<button bindtap="addToFront"> Add to the front </button>
+
+<!-- <switch wx:for="{{numberArray}}" wx:key="*this" style="display: block;"> {{item}} </switch>
+<button bindtap="addNumberToFront"> Add to the front </button> -->
+
+<view id="tapTest" data-hi="WeChat" bindtap="tapName"> Click me! </view>
+
+
+<button wx:if="{{canIUse}}" open-type="contact"> 客服消息 </button>
+<contact-button wx:else></contact-button>
+
+
+
+<include src="../../include/footer.wxml"/>
+

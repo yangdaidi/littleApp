@@ -1,0 +1,29 @@
+/*include/header.wxml style*/
+.include-header {
+  /*height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;*/
+  background: #ccc;
+  font-size: 28rpx;
+} 
+
+
+/*include/taglist.wxml style*/
+.include-scroll-view{
+	position: relative;
+	height: 84rpx;
+	white-space: nowrap;
+	background: #222;
+	color:#b8c0c6;
+}
+.include-scroll-view-item{
+	display: inline-block;
+	padding: 0 40rpx;
+	font-size: 28rpx;
+	height: 84rpx;
+	line-height: 84rpx;
+}

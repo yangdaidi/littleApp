@@ -1,0 +1,5 @@
+<!-- <include src="../../include/tag.wxml" /> -->
+<scroll-view  scroll-x="true" class="include-scroll-view" >
+    <navigator class="include-scroll-view-item" url="/pages/index/index" open-type="redirect">首页</navigator>
+    <navigator wx:for="{{nav.list}}" wx:key="unique" class="include-scroll-view-item" url="/pages/list/list?menuId={{item.id}}" open-type="redirect">{{item.tagName}}</navigator>
+</scroll-view>

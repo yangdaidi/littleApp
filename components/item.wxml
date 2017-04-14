@@ -1,0 +1,20 @@
+<!-- u-item components 每一个摄像机为一个原子-->
+<!-- <import src="../../components/item.wxml" /> -->
+<template  name="listItem">
+	<view class="u-item">
+        <view class="u-box">
+          <navigator class="item-snapshot" url="/pages/channel/channel?id={{ deviceId }}">
+            <!-- <image class="item-img" src="{{ coverFileName.indexOf('?') ? coverFileName + '&' : coverFileName + '?'}}resize=320x180" alt=""/> -->
+            <image class="item-img" src="{{ coverFileName }}" alt=""/>
+            <view class="item-play"></view>
+          </navigator>
+        </view>
+        <view class="item-name">{{ name }}</view>
+        <view class="item-detail">
+            <view class="u-fl">
+                <!-- <text>{{ (playCount + viewCount)|parseNum }} 次观看</text> -->
+                <text class="item-detail-text">{{ playCount + viewCount }} 次观看</text>
+            </view>
+        </view>
+    </view>
+</template>

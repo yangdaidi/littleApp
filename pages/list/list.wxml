@@ -1,0 +1,11 @@
+<!--list.wxml-->
+<import src="../../components/tag.wxml" />
+<import src="../../components/item.wxml" />
+<include src="../../include/taglist.wxml" />
+<!-- 推荐tag -->
+<!-- <block wx:if="{{ tagList.list.count}}"> -->
+<template is="listTag2" data="{{...tagList.list.tag}}"></template>
+<view class="u-list">
+  <template  wx:for="{{ tagList.list.resultList }}" wx:key="unique" is="listItem" data="{{...item}}"></template>
+</view>
+<!-- </block> -->

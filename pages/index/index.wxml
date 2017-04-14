@@ -1,0 +1,61 @@
+<!--index.wxml-->
+<import src="../../components/tag.wxml" />
+<import src="../../components/item.wxml" />
+
+<view class="container">
+  <!-- 滑动导航 -->
+  <include src="../../include/taglist.wxml" />
+
+  <!-- 轮播(轮播尺寸大小内容不能统一，不适合再封装一个components) -->
+  <swiper class="home-swiper" indicator-dots="{{swiper.indicatorDots}}"
+    autoplay="true" interval="{{swiper.interval}}" duration="{{swiper.duration}}" circular="true">
+    <block wx:for="{{swiper.img}}"  wx:key="unique">
+      <swiper-item >
+        <image class="home-swiper-image" src="{{item.picUrl}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  
+  <!-- 推荐tag -->
+  <block wx:if="{{ tagList.list1.count}}">
+    <!-- 引用component/tag -->
+    <template is="listTag" data="{{...tagList.list1.tag}}"></template>
+    <view class="u-list">
+      <!-- 引用components/item -->
+      <template  wx:for="{{ tagList.list1.resultList }}" wx:key="unique" is="listItem" data="{{...item}}"></template>
+    </view>
+  </block>
+
+  <!-- 最新tag -->
+  <block wx:if="{{ tagList.list2.count}}">
+    <template is="listTag" data="{{...tagList.list2.tag}}"></template>
+    <view class="u-list">
+      <template  wx:for="{{ tagList.list2.resultList }}" wx:key="unique" is="listItem" data="{{...item}}"></template>
+    </view>
+  </block>
+
+  <!-- 最近tag -->
+  <block wx:if="{{ tagList.list3.count}}">
+    <template is="listTag" data="{{...tagList.list3.tag}}"></template>
+    <view class="u-list">
+      <template  wx:for="{{ tagList.list3.resultList }}" wx:key="unique" is="listItem" data="{{...item}}"></template>
+    </view>
+  </block>
+
+  <!-- 踩坑点：wx任何对象，即使是不存在this.data中值，都指向内存中的某一个区域，
+  如果不对wx:for进行保护，那么即使数据不存在，也会随机渲染出一个列表来 -->
+  <!-- 其他标签摄像机循环 -->
+  <block wx:if="{{ tagList.list.length >0 }}" wx:for="{{ tagList.list }}" wx:for-item="itemList" wx:key="inique">
+    <block wx:if="{{ itemList && itemList.result.count}}">
+      <template is="listTag" data="{{...itemList.result.tag}}"></template>
+      <view class="u-list">
+        <template  wx:for="{{ itemList.result.resultList }}" wx:key="unique" is="listItem" data="{{...item}}"></template>
+      </view>
+    </block>
+  </block>
+
+  <!-- <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view> -->
+</view>

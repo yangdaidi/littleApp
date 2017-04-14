@@ -1,0 +1,3 @@
+<!-- 在需要使用的page中：<include src="../../include/header.wxml" /> -->
+<!-- include实际上就是代码的拷贝，可以用数据绑定使用page中的data -->
+<view class="include-header">this is header {{ staffA.firstName}}</view>
